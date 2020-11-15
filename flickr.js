@@ -1,5 +1,5 @@
 const url = "https://www.flickr.com/services/rest/?"; // fliker api 기본 요청 주소
-const key = "b7fada8d60a4d10a275193142ce41fad";  // api token
+const key = "";  // api token
 const per_page = 10; // 이미지 요청 갯수
 const tagmode = "any"; // 검색방법 (any는 한칸 띄고 검색해도 됨)
 const privacy_filter = 5; // 보안수준  5가 제일 많이 검색됨
