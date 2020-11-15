@@ -1,0 +1,125 @@
+@charset 'utf-8';
+
+* {
+	margin: 0px;
+	padding: 0px;
+	outline:0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+body {
+	background: #eee;
+}
+
+#searchBox {
+	width: 100%;
+	padding: 50px 60px 0px;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size:0;
+}
+#searchBox > input[type="text"] {
+	width: 300px;
+	height: 30px;
+	background: #fff;
+	border: 1px solid #ddd;
+	padding-left: 10px;
+	box-sizing:border-box;	
+}
+#searchBox > .btnSearch {
+	width: 80px;
+	height: 30px;
+	background: #333;
+	color: #fff;
+	font: bold 12px/30px "arial";
+	text-align: center;
+	border: none;
+	position:relative; top:-1px;
+	margin-left:10px;
+}
+
+#wrap {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 50px;
+	overflow: hidden;
+	opacity: 0;
+	transform:translateY(200px);
+	transition: 0.5s;
+}
+#wrap.on {
+	transform:translateY(0px);
+	opacity: 1;
+}
+#wrap #list {
+	width: 100%;
+}
+#wrap #list::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#wrap #list > li {
+	width: calc(100% / 6);
+	box-sizing: border-box;
+	float: left;
+	padding: 10px;
+}
+#wrap #list > li > div {
+	width: 100%;
+	background: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	overflow:hidden;
+}
+#wrap #list > li > div img {
+	width: 100%;
+}
+#wrap #list > li > div p {
+	font: normal 12px/1.2 "arial";
+	color: #777;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1599px) {
+	#wrap #list > li {
+		width: calc(100% / 5);
+	}
+}
+@media screen and (max-width: 1399px) {
+	#wrap #list > li {
+		width: calc(100% / 4);
+	}
+}
+@media screen and (max-width: 999px) {
+	#wrap #list > li {
+		width: calc(100% / 3);
+	}
+}
+@media screen and (max-width: 749px) {
+	#searchBox > input[type="text"] {
+		width: calc(100% - 90px);
+	}
+	#wrap #list > li {
+		width: calc(100% / 2);
+	}
+}
+@media screen and (max-width: 439px) {
+	#searchBox > input[type="text"] {
+		width: 100%; margin-bottom:10px;
+	}
+	#searchBox > .btnSearch {
+		width: 100%;		
+		margin-left:0px;
+	}
+	#wrap #list > li {
+		width: calc(100% / 1);
+	}
+}
